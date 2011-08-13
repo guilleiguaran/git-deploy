@@ -68,7 +68,7 @@ end
 
 if changed_files.include?('Gemfile') || changed_files.include?('Gemfile.lock')
   # update bundled gems if manifest file has changed
-  system %(umask 002 && bundle install --deployment)
+  system %(umask 002 && bundle install --deployment --without development test)
 end
 
 # run migrations when new ones added
