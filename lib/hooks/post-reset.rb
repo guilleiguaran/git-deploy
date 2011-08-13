@@ -104,7 +104,7 @@ end
 system %(umask 002 && git submodule update)
 
 # clean unversioned files from vendor (e.g. old submodules)
-system %(git clean -d -f vendor)
+# system %(git clean -d -f vendor)
 
 # determine if app restart is needed
 if cached_assets_cleared or new_migrations or !File.exists?('config/environment.rb') or
