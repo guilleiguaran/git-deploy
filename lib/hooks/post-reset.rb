@@ -91,7 +91,7 @@ if modified_files.include?('.gitmodules')
         old_url = `git config -f "#{subconf}" remote.origin.url`.chomp
         new_url = submodule['url']
         unless old_url == new_url
-          puts "changing #{path.inspect} URL:\n  #{old_url.inspect} → #{new_url.inspect}"
+          puts "changing #{path.inspect} URL:\n  #{old_url.inspect} => #{new_url.inspect}"
           `git config -f "#{subconf}" remote.origin.url "#{new_url}"`
         end
       else
